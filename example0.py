@@ -5,8 +5,8 @@
 #     strategy_description: a string
 #     move: A function that returns 'c' or 'b'
 ####
-
-team_name = 'E0'
+import random as rnd 
+team_name = 'Hate Life'
 strategy_name = 'Collude'
 strategy_description = 'Always collude.'
     
@@ -22,5 +22,10 @@ def move(my_history, their_history, my_score, their_score):
     '''
     
     # This player always colludes.
-    return 'c'
+    rnd_num = rnd.random()
+    print rnd_num
+    if rnd_num > 1:
+        return 'c'
+    else:
+        return 'b'
     
